@@ -1,14 +1,14 @@
-
 {
-"name": "Preload Init",
-"version": "1.0.0",
-"slug": "preload_init",
-"description": "Führt preload.sh vor dem Start des Home Assistant Core aus",
-"startup": "services",
-"boot": "auto",
-"init": false,
-"options": {},
-"schema": {},
-"arch": ["aarch64", "amd64", "armv7"],
-"image": "ghcr.io/home-assistant/amd64-base:3.17"
+  "name": "Preload Init",
+  "version": "1.0.0",
+  "slug": "ha_preload",
+  "description": "Führt preload.sh aus, bevor Home Assistant vollständig startet",
+  "startup": "services",
+  "boot": "auto",
+  "init": false,
+  "arch": ["aarch64", "amd64", "armv7"],
+  "host_network": true,
+  "options": {},
+  "schema": {},
+  "image": "local/ha_preload"
 }
